@@ -7,11 +7,11 @@ const setPosts = (posts = [], action) => {
   return posts;
 }
 
-const setUser = (users, action) => {
+const setUser = (users = [], action) => {
   if (action.type === "SET_USER") {
     return [...users, action.payload];
   }
-  return [];
+  return users;
 }
 
 export default combineReducers({ posts: setPosts, users: setUser })
